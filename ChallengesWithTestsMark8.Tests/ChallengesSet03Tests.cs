@@ -6,6 +6,25 @@ namespace ChallengesWithTestsMark8.Tests
 {
     public class ChallengesSet03Tests
     {
+        //example test to see if it's a palindrome or not
+        [Theory]
+        [InlineData("racecar", true)]
+        [InlineData("Hello", false)]
+        public void TestPalindrome(string word, bool expected)
+        {
+            //Arrange - prepare the code I need in order to call the method I want to test
+            //create an instance of an object
+            ChallengesSet03 tester = new ChallengesSet03();
+
+            //Act - call the method from the object you created above
+            var actual = tester.IsAnotherPalindrome(word);
+
+            //Assert
+            Assert.Equal(expected, actual);
+        }
+
+
+
         [Theory]
         [InlineData(new bool[] { true, true, true, true }, false)]
         [InlineData(new bool[] { true, true, true }, false)]
@@ -33,6 +52,24 @@ namespace ChallengesWithTestsMark8.Tests
             // Assert
             Assert.Equal(expected, actual);
         }
+        //testing whether palindrome or not..ie:  racecar
+        [Theory]
+        [InlineData("racecar", true)]
+        [InlineData("Hello", false)]
+        public void testPalindrome(string testWord, bool expected)
+        {
+            //Arrange - prepare the code I need, In order to call the method I want to test
+            //1 create an object
+            var tester = new ChallengesSet03();
+
+            //Act
+            bool actual = tester.IsAPalindrome(testWord);
+
+            //Assert
+            Assert.Equal(expected, actual);
+
+        }
+
 
         [Theory]
         [InlineData(new int[] { 1, 2, 3, 4, 5 }, true)]
