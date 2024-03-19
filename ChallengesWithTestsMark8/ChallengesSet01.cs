@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace ChallengesWithTestsMark8
+﻿namespace ChallengesWithTestsMark8
 {
     public class ChallengesSet01
     {
         public bool AreTwoNumbersTheSame(int num1, int num2)
         {
-            if(num1 == num2)
+            if (num1 == num2)
             {
                 return true;
             }
@@ -28,7 +26,7 @@ namespace ChallengesWithTestsMark8
 
         public int GetSmallestNumber(int number1, int number2)
         {
-            if(number1 < number2)
+            if (number1 < number2)
             {
                 return number1;
             }
@@ -45,12 +43,19 @@ namespace ChallengesWithTestsMark8
 
         public string GetGreeting(string nameOfPerson)
         {
-            return nameOfPerson;
+            if (nameOfPerson == "")
+            {
+                return "Hello!";
+            }
+            else
+            {
+                return $"Hello, {nameOfPerson}!";
+            }
         }
 
         public string GetHey()
         {
-            return "Hey";
+            return "HEY!";
         }
     }
 }
